@@ -1,0 +1,676 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --background-color: #191919;
+    --background-dim: #101012a9;
+    --font-color: #F8F8F8;
+    --text-light: #A2A2A6;
+    --primary-font: "Poppins", sans-serif;
+    --accent-blue: #966bff;
+    --accent-one: #7453c5;
+    --accent-two: #956afa;
+    --title-colour: #fff;
+    --accent-three: #fff;
+    /* --background-color: white;
+    --text-light: #323234;
+    --font-color: black;
+    --background-dim: #f2f2f2a9;
+    --title-colour: black; */
+
+}
+body {
+    background: var(--background-color);
+    color: var(--font-color);
+    font-family: var(--primary-font);
+    margin: 5%;
+    user-select: none;
+}
+
+.overview {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.about {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 10px;
+}
+.about img {
+    width: 40%;
+}
+.about div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.about div > h2 {
+    text-transform: uppercase;
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--title-colour);
+}
+.about div > h2::after {
+    content: '(Lokesh Kumar)';
+    letter-spacing: 7px;
+    display: block;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+/* resume btn */
+.resumelink {
+    text-decoration: none;
+}
+button.Resume_btn {
+  font-family: inherit;
+  font-size: 15px;
+  background: var(--accent-blue);
+  color: white;
+  fill: rgb(155, 153, 153);
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  width: fit-content;
+}
+
+button.Resume_btn span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+button.Resume_btn > .button-span {
+    color: var(--font-color);
+    font-size: 10px;
+}
+
+button.Resume_btn svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+button.Resume_btn:hover {
+  background: var(--accent-one);
+}
+
+button.Resume_btn:hover .svg-wrapper {
+  transform: scale(1.25);
+  transition: 0.5s linear;
+}
+
+button.Resume_btn:hover svg {
+  transform: translateX(6em) scale(1.1) ;
+}
+
+button.Resume_btn:hover span {
+  opacity: 0;
+  transition: 0.5s linear;
+}
+
+button.Resume_btn:active {
+  transform: scale(0.95);
+}
+
+
+.subtitle {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.hr {
+    background-color: var(--title-colour);
+    /* background-color: rgba(255, 255, 255, 0.453); */
+    height: 2px;
+    margin: 5% auto;
+    display: flex;
+}
+
+.numbers {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+}
+.numbers p {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 50px;
+    font-weight: 700;
+}
+.numbers p::after {
+    font-size: 12px;
+    font-weight: 500;
+}
+.numbers p:nth-child(1)::after {
+    content: 'Years of Expreriance';
+}
+.numbers p:nth-child(2)::after {
+    content: 'Project Completed';
+}
+.numbers p:nth-child(3)::after {
+    content: 'Satisfied Client';
+}
+/* contact code */
+.contactmepannel {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contactmepannel .hr {
+    width: 100%;
+}
+.contactinitials {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+.contactsection {
+    color: var(--font-color);
+    border: .01em solid var(--border-color, #ccc); 
+    padding: 10px 20px;
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-size: 15px;
+}
+
+.contactinitials a {
+    cursor: pointer;
+    text-decoration: none; 
+    color: inherit;
+}
+
+/* contact code */
+
+/* hire me second last pannel */
+.hireme {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.hireme1, .hireme2 {
+    background-color: var(--background-dim);
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.hirelink {
+    color: var(--font-color);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 15px;
+}
+.hirelink svg {
+    width: 15px;
+}
+.hirelink a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* footer code */
+footer {
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    font-size: 11px;
+}
+
+.mainContainer {
+      margin: 0 auto;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .mainContainerheader {
+      padding: 0px;
+    }
+
+    .mainContainerheader h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #1f2937;
+    }
+
+    .mainContainerheader p {
+      font-size: 0.875rem;
+      margin-top: 4px;
+    }
+    .boxes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 20px 0;
+    }
+    .box {
+        background-color: var(--background-dim);
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 16px;
+        border-radius: 10px;
+        width: max-content;
+        transition: transform 0.2s ease;
+    }
+    .box:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+    .box svg {
+        width: 16px;
+    }
+
+    
+
+    .content-section {
+      padding: 0px;
+    }
+
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+
+/* skills page */
+/* skills page */
+
+/* projects of mine css */
+/* projects of mine css */
+
+        
+.pt-tab-wrapper { /* Renamed from .tab-wrapper */
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .pt-tab-wrapper .hr {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            margin-top: -30px;
+            display: none;
+        }
+        /* ----------------------------------------------------
+           TAB BUTTONS & NAVIGATION
+        ---------------------------------------------------- */
+
+        .pt-tab-navigation, .tab-navigation {
+            display: flex;
+            justify-content: space-around;
+            border-bottom: 2px solid var(--border-color);
+            padding: 0 10px;
+        }
+
+        .pt-tab-btn, .tab-btn  { 
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 12px 10px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-muted);
+            transition: all 0.3s ease;
+            outline: none;
+            flex-grow: 1; 
+            text-align: center;
+        }
+
+        .pt-tab-btn:hover, .tab-btn:hover {
+            color: var(--text-light);
+            border-bottom: 4px solid;
+            border-bottom-color: var(--accent-blue) !important;
+        }
+        .pt-tab-btn:focus, .tab-btn:focus {
+            border-bottom: 4px solid;
+        }
+        .pt-tab-active, .tab-btn.active {
+            color: var(--accent-blue) !important;
+            padding: 10px;
+            border-bottom: 4px solid var(--accent-blue);
+            border-bottom-color: var(--accent-blue) !important;
+        }
+        #pt-tab-header h2 {
+            font-size: 30px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+            color: white;
+        }
+        #pt-tab-caption { /* Renamed from #skillssubcaption */
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+        .skillsbtn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* gap: 5px; */
+        }
+        .skillsbtn p {
+            font-size: 20px;
+        }
+
+        /* ----------------------------------------------------
+           CONTENT CONTAINERS (THE DIVS)
+           ---------------------------------------------------- */
+        .pt-content-container { /* Renamed from .content-container */
+            /* padding: 30px; */
+            border-radius: 8px;
+            min-height: 150px; 
+            
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            
+            /* Add overflow protection in case internal content is too wide */
+            overflow-x: hidden; 
+        }
+
+        .pt-content-active { /* Renamed from .content-active */
+            display: block;
+            border-bottom: #956afa;
+            opacity: 1;
+        }
+        
+        .pt-content-container h3 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            margin-bottom: 15px;
+        }
+
+        /* ----------------------------------------------------
+           INTERNAL COMPONENTS (SKILL BOXES)
+           ---------------------------------------------------- */
+        .pt-skill-grid { /* Renamed from .boxes */
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+         .webprojects {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            overflow: hidden;
+            gap: 10px;
+            width: 48%;
+        }
+        .webprojects img {
+            width: 100%;
+            height: 80%;
+            border-radius: 5px;
+        }
+        .webprotitle {
+            display: flex;
+            gap: 5px;
+            font-size: 15px;
+        }
+        .webprotitle svg {
+            width: 15px;
+        }
+        .webprodectription {
+            font-size: 10px;
+            text-align-last: left;
+        }
+
+        /* visit btn */
+
+        /* From Uiverse.io by adamgiebl */ 
+        .cssbuttons-io {
+            position: relative;
+            font-family: inherit;
+            font-weight: 500;
+            font-size: 10px;
+            letter-spacing: 0.05em;
+            border-radius: 0.8em;
+            cursor: pointer;
+            border: none;
+            background: linear-gradient(to right, var(--accent-one), var(--accent-two));
+            color: ghostwhite;
+            overflow: hidden;
+        }
+
+        .cssbuttons-io svg {
+            width: 1.2em;
+            height: 1.2em;
+            margin-right: 0.5em;
+        }
+
+        .cssbuttons-io span {
+            position: relative;
+            z-index: 10;
+            transition: color 0.4s;
+            display: inline-flex;
+            align-items: center;
+            padding: 0.8em 1.2em 0.8em 1.05em;
+        }
+        .button-span {
+            color: var(--accent-three);
+        }
+
+        .cssbuttons-io::before,
+        .cssbuttons-io::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .cssbuttons-io::before {
+            content: "";
+            background: #000;
+            width: 120%;
+            left: -10%;
+            transform: skew(30deg);
+            transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+        }
+
+        .cssbuttons-io:hover::before {
+            transform: translate3d(100%, 0, 0);
+        }
+
+        .cssbuttons-io:active {
+            transform: scale(0.95);
+        }
+        /* --- Dialog Overlay (Hidden by default) --- */
+        .dialog-overlay {
+            /* Hidden by default */
+            display: none; 
+            
+            /* Fixed position to cover the whole screen */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            
+            /* Semi-transparent background */
+            background-color: rgba(0, 0, 0, 0.5); 
+            
+            /* Ensure it's on top of everything */
+            z-index: 1000; 
+            
+            /* Centering the dialog box */
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* --- The Main Dialog Box Content --- */
+        .dialog-box {
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            /* max-width: 400px; */
+            overflow: hidden;
+            position: relative;
+        }
+        .dialog-box img {
+            width: 400px;
+        }
+        .image-box {
+            width: 600px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        /* --- Close Button Style --- */
+        .dialog-close-button {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            color: #333;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* --- Button that opens the dialog (Optional Styling) --- */
+        .dialog-open-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* slider container code */
+        .slider-container {
+            width: 600px;         
+            height: 400px;       
+            overflow: hidden;     
+            margin: 50px auto;    
+            /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); */
+            border-radius: 8px;
+        }
+        .slide-track {
+            width: 500%;          
+            height: 100%;
+            display: flex;
+            animation: slide 10s linear infinite;
+        }
+
+        /* Pause the animation when the mouse hovers over the slider */
+        .slide-track:hover {
+            animation-play-state: paused;
+        }
+        .slide-track img {
+            width: 20%;
+            height: 100%;
+            object-fit: contain; 
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            19.99% { transform: translateX(0); }
+            20% { transform: translateX(-20%); }
+            39.99% { transform: translateX(-20%); }
+            40% { transform: translateX(-40%); }
+            59.99% { transform: translateX(-40%); }
+            60% { transform: translateX(-60%); }
+            79.99% { transform: translateX(-60%); }
+            80% { transform: translateX(-80%); }
+            99% { transform: translateX(-80%); }
+            100% { transform: translateX(0); }
+        }
+
+
+
+        /* LOGO ANIMATION */
+        .animation_discription {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 10px;
+            margin-top: 40px;
+        }
+        .animation_carousel {
+            margin: 20px auto;
+            margin-top: 40px;
+            width: 100%;
+            display: flex;
+            overflow-x: auto;
+            gap: 1em;
+            mask-image: linear-gradient(to left, transparent, #000 10% 90%, transparent);
+         }
+         .animation_carousel::-webkit-scrollbar {
+            display: none;
+         }
+         .animation_group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1em;
+            /* padding-right: 1em; */
+            animation: spin 10s infinite linear;
+         }
+         .animation_card {
+            width: 200px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+         }
+         .animation_card img {
+            width: 100%;
+         }
+         @keyframes spin {
+            from {translate:0;}
+            to {translate: -100%;}
+         }
